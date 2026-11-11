@@ -1,0 +1,392 @@
+
+
+/* =================================
+   HOSPITAL LUMINIS
+   IDENTIDADE VISUAL INSTITUCIONAL
+================================= */
+
+:root {
+    --navy: #071B35;
+    --blue: #087BB5;
+    --cyan: #42C5ED;
+    --white: #FFFFFF;
+    --light: #F3F8FC;
+    --text: #26394D;
+    --muted: #718096;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    min-height: 85px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px #071b3525;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo span {
+    color: var(--cyan);
+    font-size: 30px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav a {
+    color: #E2EDF7;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: var(--cyan);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 9%;
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            #087bb570,
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #071B35,
+            #103E63
+        );
+
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.eyebrow {
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.15;
+    margin: 25px 0;
+    max-width: 650px;
+}
+
+.hero p {
+    color: #D0DFEC;
+    font-size: 16px;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 25px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--cyan);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+/* TÍTULOS DAS SEÇÕES */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+    color: var(--navy);
+    font-size: clamp(25px, 3vw, 36px);
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+/* ACESSOS RÁPIDOS */
+
+.quick-access {
+    padding: 90px 8%;
+    background: var(--white);
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.access-card {
+    display: block;
+    background: var(--white);
+    border: 1px solid #E1EAF2;
+    border-radius: 14px;
+    padding: 30px 24px;
+    transition: 0.3s;
+}
+
+.access-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--cyan);
+    box-shadow: 0 12px 30px #071B3515;
+}
+
+.access-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.access-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* SOBRE O HOSPITAL */
+
+.about {
+    padding: 100px 10%;
+    background: var(--light);
+}
+
+.about-content {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+.about h2 {
+    margin: 20px 0;
+}
+
+.about p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+/* ESPECIALIDADES */
+
+.services {
+    padding: 90px 8%;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px 24px;
+    border: 1px solid #E1EAF2;
+    border-radius: 14px;
+    background: var(--white);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #071B3515;
+    border-color: var(--cyan);
+}
+
+.service-card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.disclaimer {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* CONTATO */
+
+.contact {
+    text-align: center;
+    padding: 85px 20px;
+    background: #EAF5FB;
+}
+
+.contact p {
+    color: var(--muted);
+    margin-top: 15px;
+}
+
+/* RODAPÉ */
+
+.footer {
+    padding: 45px 20px;
+    text-align: center;
+    background: var(--navy);
+    color: #C5D8E8;
+}
+
+.footer-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.footer-brand:first-letter {
+    color: var(--cyan);
+}
+
+.copyright {
+    font-size: 12px;
+    color: #91AFC6;
+    margin-top: 22px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+
+    .access-grid,
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .header {
+        min-height: 75px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 75px 7%;
+    }
+
+    .quick-access,
+    .services {
+        padding: 65px 7%;
+    }
+
+    .about {
+        padding: 70px 7%;
+    }
+
+    .access-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+}
